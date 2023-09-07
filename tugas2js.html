@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pegawai = "Ridwan";
+        let jabatan = "Manager";
+        let status = "Menikah";
+        let gaji = 0;
+        
+
+        document.write ("Nama Lengkap :" + pegawai);
+        document.write ("<br>Jabatan :" + jabatan);
+        document.write ("<br>Status :" + status);
+        document.write ("<hr>");
+
+        if (jabatan == "Manager"){
+            gaji = 15000000;
+        }else if (jabatan == "Asisten Manager"){
+            gaji = 10000000;
+        }else if (jabatan == "staff"){
+            gaji = 5000000;
+        }else {
+            gaji = 0;
+        }
+
+
+        if (gaji){
+            document.write ("Gaji Pokok :" + gaji);
+
+            let tunjangan = 15/100* gaji;
+            document.write("<br>Tunjangan :" + tunjangan);
+
+            let bpjs = 10/100* gaji;
+            document.write("<br>BPJS :" + bpjs);
+            
+            let tk = status == "Menikah"? 20/100 * gaji : 0;
+            document.write("<br>Tunjangan Keluarga :" + tk);
+
+            document.write (`<br>Total Gaji : ${gaji + tunjangan + bpjs + tk}` );
+
+        } else{
+            document.write("Informasi jabatan tidak ditemukan");
+        }
+
+
+        
+        
+
+    </script>
+</body>
+</html>
