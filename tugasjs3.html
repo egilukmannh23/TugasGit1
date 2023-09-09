@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing = "0"  style="padding:10; text-align: center; width:100%">
+        <thead>
+            <tr>
+                <td>Nama</td>
+                <td>Jabatan</td>
+                <td>Gaji Pokok</td>
+                <td>Tunjangan Jabatan</td>
+                <td>Tunjangan Kesehatan</td>
+                <td>Gaji Kotor</td>
+                <td>Agama</td>
+                <td>Zakat Profesi</td>
+                <td>Take Home Pay</td>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                let pegawai =['badi', 'hertha', 'ayaka' ,'hu tao ', 'ayato', 'thouma', 'bennet', 'kaeya', 'diluc', 'jean'];
+                
+                pegawai.forEach((pgw,index) => {
+                    let jabatan = "";
+                    let gaji = 0;
+                    let TunjanganJabatan = 0;
+                    let TunjanganKesehatan = 0;
+                    let GajiKotor = 0;
+                    let agama = "";
+                    let warna = "";
+                    let zakatprofesi = 0;
+                    let takehomepay = 0;
+                
+
+                    //jabatan
+                    if (index < 2 ){
+                        jabatan = "manager"
+                    } else if (index >=2 && index <6){
+                        jabatan = "asisten Manager"
+                    } else if (index >=6 && index <9){
+                        jabatan = "supervisor"
+                    } else {
+                        jabatan = "staff"
+                    }
+
+                    //gaji pokok
+                    switch (jabatan) {
+                        case "manager" : gaji = 15000000;
+                        break;
+                        case "asisten Manager" : gaji = 10000000;
+                        break;
+                        case "supervisor" : gaji = 7000000;
+                        break;
+                        default: gaji = 4000000
+                        break;
+                    }
+
+                    //tunjangan jabatan
+                    TunjanganJabatan = (20/100) * gaji
+
+                    //tunjangan kesehatan
+                    TunjanganKesehatan = (10/100) * gaji
+
+                    //gaji kotor
+                    GajiKotor = gaji + TunjanganJabatan + TunjanganKesehatan
+
+                    //agama
+                    agama = (index % 2 == 0)? "Muslim" : "Non Muslim";
+
+                    //warna
+                    warna = (index % 2== 0)? "yellow" : "blue";
+
+                    //zakat profesi
+                    if (agama == "Muslim" && GajiKotor >=7000000){
+                        zakatprofesi = (2.5/100) * GajiKotor
+
+                    }
+
+                    //take home pay
+                    takehomepay = GajiKotor - zakatprofesi
+                    document.write(`
+                        <tr bgcolor="${warna}">
+                            <td>${pgw}</td> 
+                            <td>${jabatan}</td>
+                            <td>${gaji}</td> 
+                            <td>${TunjanganJabatan}</td>
+                            <td>${TunjanganKesehatan}</td>
+                            <td>${GajiKotor}</td>
+                            <td>${agama}</td>
+                            <td>${zakatprofesi}</td>
+                            <td>${takehomepay}</td>
+                        </tr>
+                    `)
+                    
+                });
+            </script>
+        </tbody>
+    </table>
+    
+</body>
+</html>
