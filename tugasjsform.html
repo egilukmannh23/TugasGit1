@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form id="frm">
+        <table style="color : blue; text-align: center; width: 100%; border: 1px solid;">
+            <tr>
+                <th colspan="2">Form Pembelian Barang</th>
+            </tr>
+            <tr>
+                <td><label>Nama :</label></td>
+                <td><input type="text" name ="nama" placeholder="Masukan nama anda"></td>
+            </tr>
+            <tr>
+                <td><label>Pilih Produk :</label></td>
+                <td><select name="produk" id="brg">
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>Jumlah Produk :</label></td>
+                <td><input type="text" name="jumlah"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" onclick="databarang()">Proses</button></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <script src="/js/tugasformjs.js"></script>
+</body>
+</html>

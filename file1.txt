@@ -1,3 +1,0 @@
-ini adalah tugas 1 tentaang git
-melakukan branch dan
-forking
