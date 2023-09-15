@@ -1,0 +1,43 @@
+<script>
+    //class
+    class gempa{
+        //construtctor
+        constructor(lokasi,skala){
+            this.lokasi = lokasi;
+            this.skala = skala;
+        }
+
+        //function
+        dampak(){
+            this.dampakGempa = "";
+            if(this.skala <=2){
+                this.dampakGempa = "Tidak Terasa";
+            } else if (this.skala >2 && this.skala <5){
+                this.dampakGempa= "Bangunan Retak - Retak";
+            } else if (this.skala >4 && this.skala <7){
+                this.dampakGempa = "Bangunan Roboh";
+            }else {
+                this.dampakGempa = "Berpotensi Tsunami";
+            }
+            
+            //print data
+            document.write('<br> Lokasi Gempa :', this.lokasi);
+            document.write('<br> Skala Gempa :', this.skala);
+            document.write('<br> Dampak Gempa :', this.dampakGempa);
+            document.write('<br>-------------------------------<br>');
+        }
+    }
+
+    //data gempa
+    let info1 = new gempa ('jakarta',1);
+    let info3 = new gempa ('garut',3);
+    let info4 = new gempa ('jawa',4);
+    let info5 = new gempa ('kalimantan',5);;
+    let info7 = new gempa ('ponorogo',7);
+
+    info1.dampak();
+    info3.dampak();
+    info4.dampak();
+    info5.dampak();
+    info7.dampak();
+</script>
