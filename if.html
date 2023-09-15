@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //IF ELSE & SWITCH CASE
+        let nama = "Egi Lukman";
+        let prodi = "Sistem Informasi";
+        let nilai = 70;
+        let grade = "";
+        let predikat = "";
+
+        if (nilai > 85 && nilai <=100) grade ="A";
+        else if (nilai >75 && nilai <=85) grade = "B";
+        else if (nilai >65 && nilai <=75) grade = "C";
+        else grade = "D";
+
+        switch(grade){
+            case "A" : predikat = "Sempurna";
+            break;
+            case "B" : predikat = "Baik";
+            break;
+            case "C" : predikat = "Cukup";
+            break;
+            case "D" : predikat = "Buruk";
+            break;
+
+        }
+
+        document.write("<br>Nama : " + nama);
+        document.write("<br>Program studi :" + prodi);
+        document.write("<br>Nilai :" + grade);
+        document.write("<br>Predikat :" + predikat);
+    </script>
+</body>
+</html>

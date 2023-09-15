@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //For
+        for (let i = 1; i < 10; i++){
+            document.write(i);
+            
+        }
+
+        document.write("<hr>");
+
+        for (let j = 10; j > 0; j--){
+            document.write(j)   
+        }
+
+        document.write("<hr>");
+
+        //while
+        let ulangi = confirm("Apakah anda mau mengulang?");
+        let i = 0;
+
+        while(ulangi){
+            i++;
+            ulangi = confirm("Apakah anda mau mengulang?");
+        }
+
+        document.write("Telah mengulang sebanyak" + i + " kali");
+    </script>
+</body>
+</html>

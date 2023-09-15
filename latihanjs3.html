@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="padding : 10; text-align: center; width :100%; border: 20px;">
+    <thead>
+        <tr>
+            <td>No</td>
+            <td>Nama</td>
+            <td>Alamat</td>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            let no, warna;
+            for (no = 1; no <=20; no++){
+                warna = (no % 2 == 0 ) ? 'yellow' : 'blue';
+                document.write (` <tr bgcolor="${warna}">
+                    <td>${no}</td>
+                    <td> Mahasiswa ${no}</td>
+                    <td> Kecamatan Cisewu ${no}</td>
+                        </tr>`);
+            }
+        </script>
+    </tbody>
+</html>

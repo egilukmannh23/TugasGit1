@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array 1 dimensi
+        let buah = ['pepaya','mangga','pisang','jambu'];
+
+        //mengganti index2
+        buah[2]='jeruk'; 
+                for(var i=0; i< buah.length; i++){
+                    document.write("<br>" +buah[i]);
+                }
+
+    </script>
+    <script>
+        //array 2 dimensi
+        let p1 = {'Nama' : 'Budi' , 'Divisi' : 'SDM' , 'Gaji' : 7000000};
+        let p2 = {'Nama' : 'Andi' , 'Divisi' : 'HRD' , 'Gaji' : 9000000};
+        let p3 = {'Nama' : 'Ari' , 'Divisi' : 'Manager' , 'Gaji' : 8000000};
+        let pegawai = [p1,p2,p3];
+
+        //menampilkan object
+        for (let i = 0; i < pegawai.length; i++){
+            document.write("<br>" + pegawai[i]);
+        }
+
+        //menampilkan data
+            for (p of pegawai){
+                document.write("<br>" + p.Nama);
+                document.write("<br>" + p.Divisi);
+                document.write("<br>" + p.Gaji);
+
+            }
+    </script>
+</body>
+</html>
