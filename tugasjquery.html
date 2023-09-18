@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Tanpa Gambar</title>
+    <style>
+        body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.card {
+    width: 300px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+    background-color: wheat;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+}
+
+
+#profile, #motoHidup, #keahlian {
+    display: none;
+}
+
+h3 {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h3 id="profile1">Profile</h3>
+            <p>Ini adalah profile tentang saya.</p>
+            <p id="profile">Nama : Egi Lukman Nur Hakim
+                        <br> TTL : 23 Januari 2002
+                        <br> Asal : Garut
+                        <br> Favorit : Sejarah
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card">   
+    <div class="card-content">
+        <h3 id="motoHidup2">Moto Hidup</h3>
+        <p>Ini adalah moto hidup saya.</p>
+        <p id="motoHidup">"Lebih baik terlambat daripada tidak sama sekali"
+                        <br>Karena ketika terlambat melakukan sesuatu bukan berarti kesempatan itu hilang, jika masih ada keyakinan tetap lakukan walau tidak tepat waktu
+        </p>
+    </div>
+    </div>
+
+    <div class="card">   
+    <div class="card-content">
+        <h3 id="keahlian3">Keahlian</h3>
+        <p>Berikut adalah pengalaman dan keahlian saya</p>
+        <p id="keahlian"><br>Keahlian : Komputer dan jaringan
+                        <br>Pengalaman : Magang di santika komputer</p>
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //file check
+        $(document).ready(function(){
+
+            //event
+             $('#profile1').click(function(){
+                $('#profile').toggle()
+             });
+
+             $('#motoHidup2').click(function(){
+                $('#motoHidup').toggle()
+             });
+
+             $('#keahlian3').click(function(){
+                $('#keahlian').toggle()
+             });
+
+             $('h3').mouseenter(function(){
+                $(this).css('color', 'blue')
+             });
+
+             $('h3').mouseleave(function(){
+                $(this).css('color', 'black')
+             });
+
+
+        });
+    </script>
+</body>
+</html>
